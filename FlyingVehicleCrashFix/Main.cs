@@ -16,10 +16,10 @@ namespace FlyingVehicleCrashFix
     {
         public Main()
         {
-            Tick += HelicopterHandler;
+            Tick += PlaneHandler;
         }
 
-        public async Task HelicopterHandler()
+        public async Task PlaneHandler()
         {
             foreach(Vehicle v in World.GetAllVehicles())
             {
@@ -29,7 +29,7 @@ namespace FlyingVehicleCrashFix
                     {
                         if (v != null)
                         {
-                            if (v.ClassType == VehicleClass.Helicopters || v.ClassType == VehicleClass.Planes)
+                            if (v.ClassType == VehicleClass.Planes)
                             {
                                 if (v != null)
                                 {
